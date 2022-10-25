@@ -51,6 +51,7 @@ For more information about Active Directory, see [Active Directory Domain Servic
 
    - Certificates issued by a third-party CA have the advantage of being automatically trusted by all clients and devices. Certificates that are issued by an internal, private CA aren't automatically trusted by clients and devices, and not all devices (for example, phones) can be configured to trust private certificates.
    - Consider using an intermediate certificate instead of the root certificate to issue certificates to users. That way, if you ever need to revoke and reissue certificates, the root certificate is still intact.
+   - The certificate must have a private key and the X509 extension "Subject Key Identifier" must be populated 
 
 2. Publish the user's certificate in their on-premises Active Directory account in the **UserSMIMECertificate** and/or **UserCertificate** attributes.
 
